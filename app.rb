@@ -1,5 +1,6 @@
 class App < Sinatra::Base
 
+	time=Time.now.strftime("%A, %B %d, %Y")
 	get '/' do
 		erb :index
 	end
@@ -14,6 +15,7 @@ class App < Sinatra::Base
 
 	get '/date' do
 		erb :date
+		"The date is #{time}"
 	end
 
 end
